@@ -4,6 +4,7 @@ os.system("cls || cleas")
 soma = 0
 
 for i in range(5):
-    nota = int(input("digite uma nota: "))    
+    nota = int(input(f"digite o nota: "))    
 soma = soma + nota
-print(soma)
+
+print(f"soma: {soma}")
