@@ -10,7 +10,7 @@ segunda_nota = float(input)("digite sua segunda_nota:")
 terceira_nota = float(input)("digite sua terceira_nota:")
 media = (peimeira_nota + segunda_nota + terceira_nota) / 3
 
-if media <=7
+if media <=7:
  print("o alumo sera reprovado")
 else: 
  print("o aluno sera aprovado")
