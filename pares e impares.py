@@ -1,10 +1,10 @@
 import os
-os.system("cls || cleas") 
+os.system("cls || clear") 
 
 pares = 0
 impares = 0
 
-for i in range(5):
+for i in range(6):
     numero = int (input("digite um numero: "))
 
     if numero % 2 == 0:
