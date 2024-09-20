@@ -2,7 +2,7 @@ import os
 os.system("cls || clear")
 
 QUANTIDADE_NUMERO=3
-lista_pares_positivo=0
+lista_pares_positivo=[]
 
 # Entrada.
 for i in range(QUANTIDADE_NUMERO):
