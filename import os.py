@@ -1,6 +1,6 @@
- import os
+import os
 
- os.system("cls || cleas")
+os.system("cls || cleas")
 
 #Solicitando dades
 primeiro_numero = float(input("digite seu primeiro_numero: "))
