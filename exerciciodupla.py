@@ -58,3 +58,50 @@ def media(a):
     
 while True:
     lista_final = []    
+    menu()
+    opcao = int(input("Resposta: "))
+    match opcao:
+        case 1:
+            habitantes = habitantes(
+                idade = int(input("digite sua idade: ")),
+                sexo = input("digite seu genero: ").lower().strip(),
+                solario = float(input("digite quanto de salario voce recebe: ")),
+            )
+            lista_final.append(habitantes)
+            nome_arquivo = "dados.txt"
+            criando_arquivo(nome_arquivo, lista_final)
+            limpar_tela()
+        case 2:
+            lista_final1 = []
+            contador =0
+            limpar_tela()
+            lista_salario = []
+            lista_idade = []
+            nome_arquivo = "dados.txt"
+            lista_final1 = lendo_arquivos(nome_arquivo)
+            for habitantes in lista_final1:
+                lista_idade.append(habitantes.idade)
+                if habitantes.sexo == "f" and habitantes.salario >= 5000:
+                    contador +=1
+                lista_salario.append(habitantes.salario)
+                
+            media_salario = media(lista_salario)
+            maior_idade = max(lista_idade)
+            menor_idade = min(lista_idade)
+            lista_final.append(contador)
+            lista_final.append(media_salario)
+            lista_final.append(maior_idade)
+            lista_final.append(menor_idade)
+            nome_arquivo = "pesquisa_habitante.txt"
+            criando_arquivo_final(nome_arquivo, lista_final)
+            print("\n=== Exibindo resultado ===")
+            print(f"media salario do grupo: {media_salario:.2f}")
+            print(f"maior idade do grupo: {maior_idade}")
+            print(f"menor idade do grupo: {menor_idade}")
+            print(f"Quantidade de mulhers com salario a partir de R$ 5000,00: {contador}")
+        case 3:
+            print("programa encerrado")
+            break
+        case _:
+            print("Opcao invalida. tente novamente")
+            break    
