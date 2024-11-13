@@ -1,0 +1,13 @@
+prefix=/workspaces/iransantos/.conda
+exec_prefix=/workspaces/iransantos/.conda
+libdir=/workspaces/iransantos/.conda/lib
+sharedlibdir=/workspaces/iransantos/.conda/lib
+includedir=/workspaces/iransantos/.conda/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
